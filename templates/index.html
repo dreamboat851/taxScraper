@@ -69,6 +69,15 @@
             margin-top: 40px;
             color: #777;
         }
+
+        /* Usage instructions styling */
+        .usage-instructions {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -81,6 +90,21 @@
     <!-- Content container -->
     <div class="container">
         <h2>Upload File to Scrape Taxonomy Information</h2>
+
+        <!-- Usage Instructions -->
+        <div class="usage-instructions">
+            <h3>Usage Instructions</h3>
+            <p>This web app scrapes taxonomy information from the NCBI website when the user provides a list of scientific names of animals up to the species level in a text file. The program outputs all available taxonomy information from the NCBI website, and if it cannot obtain information for some species, it generates a separate file with those species names for the user to try manually.</p>
+            <ul>
+                <li>Upload a text file (.txt) or CSV file (.csv) with a list of scientific names (one name per line).</li>
+                <li>The app will scrape NCBI taxonomy information and generate:</li>
+                <ul>
+                    <li>A CSV file with the taxonomy information.</li>
+                    <li>A text file with species names for which information could not be found.</li>
+                </ul>
+                <li>Both files will be downloaded as a ZIP archive.</li>
+            </ul>
+        </div>
 
         <!-- Form for file upload -->
         <form action="/uploader" method="POST" enctype="multipart/form-data">

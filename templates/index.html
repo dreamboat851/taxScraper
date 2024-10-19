@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxScraper</title>
+    <style>
+        /* Background and general styling */
+        body {
+            background: linear-gradient(to right, #74ebd5, #ACB6E5); /* Light blue gradient background */
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #4A90E2; /* Darker blue header */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Container for the content */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form styling */
+        form {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        /* File input styling */
+        input[type="file"] {
+            display: block;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        /* Submit button styling */
+        input[type="submit"] {
+            background-color: #4A90E2;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #357ABD;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with tool name -->
+    <header>
+        TaxScraper
+    </header>
+
+    <!-- Content container -->
+    <div class="container">
+        <h2>Upload File to Scrape Taxonomy Information</h2>
+
+        <!-- Form for file upload -->
+        <form action="/uploader" method="POST" enctype="multipart/form-data">
+            <label for="file">Choose a file:</label>
+            <input type="file" id="file" name="file" required>
+            <input type="submit" value="Start scraping taxonomy data!">
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TaxScraper. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
